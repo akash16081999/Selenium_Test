@@ -5,9 +5,11 @@
     <classes>
       <class name="org.ee.test.TC_001LoginTest">
         <methods>
-          <include name="loginTest" invocation-numbers="1"/>
+          <include name="loginTesWithInvalidData" invocation-numbers="0 1"/>
           <include name="stopWeb"/>
+          <include name="createReportGeneration"/>
           <include name="startWeb"/>
+          <include name="flushReport"/>
         </methods>
       </class> <!-- org.ee.test.TC_001LoginTest -->
     </classes>

@@ -1,6 +1,9 @@
 package org.ee.seleniumbase;
+
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
@@ -10,18 +13,17 @@ public class Base extends SeleniumBase {
 
 	static String URL = "https://test-manage.eateasy.ae/";
 	public ExtentRepoterDemo demo;
-	
-	@BeforeSuite
+
+	@BeforeClass
 	public void createReportGeneration() {
-		ExtentRepoterDemo.getInstanceReporter();
+		demo = ExtentRepoterDemo.getInstanceReporter();
 
 	}
-	
 
 	@BeforeMethod
 	public void startWeb() {
 
-		setUp(Browsers.CHROME,URL);
+		setUp(Browsers.CHROME, URL);
 
 	}
 
@@ -30,11 +32,11 @@ public class Base extends SeleniumBase {
 		quite();
 
 	}
-	
-	@AfterSuite
-	private void flushReport() {
 
-     demo.
+	@AfterClass
+	public void flushReport() {
+
+		demo.saveReport();
 
 	}
 
