@@ -16,37 +16,32 @@ public class ExtentRepoterDemo {
 		reports = new ExtentReports();
 		reports.attachReporter(sparkTemplate);
 	}
-	
-	
+
 	public static ExtentRepoterDemo getInstanceReporter() {
-		
-		
-		
+
 		return new ExtentRepoterDemo();
 
 	}
-	
+
 	public void saveReport() {
 		reports.flush();
 	}
 
-	public void createTest(String TestDiscription, String status) {
+	public void createTest(String TestDiscription) {
 		test = reports.createTest(TestDiscription);
 
-		switch (status.toLowerCase()) {
-		
-		case "pass":
-			test.pass("static data");
-			
-			break;
-
-		case "fail":
-			test.fail("static data");
-			break;
-		default:
-			throw new IllegalArgumentException("Unexpected value: " + status);
-
-		}
+		/*
+		 * switch (status.toLowerCase()) {
+		 * 
+		 * case "pass": test.pass("static data");
+		 * 
+		 * break;
+		 * 
+		 * case "fail": test.fail("static data"); break; default: throw new
+		 * IllegalArgumentException("Unexpected value: " + status);
+		 * 
+		 * }
+		 */
 
 	}
 

@@ -17,7 +17,7 @@ public class TC_001LoginTest extends Base {
 
 		LoginPage login = new LoginPage(driver, wait);
 		login.enterUserName(PropertiesReader.getInstancePropertyReader().getUsername());
-		demo.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), "pass");
+		//demo.createTest(new Object() {}.getClass().getEnclosingMethod().getName());
 		login.enterPassword(PropertiesReader.getInstancePropertyReader().getPassword()).clickLogin();
 		
 
@@ -30,7 +30,7 @@ public class TC_001LoginTest extends Base {
 
 		LoginPage login = new LoginPage(driver, wait);
 		login.enterUserName(username);
-		demo.createTest(new Object() {}.getClass().getEnclosingMethod().getName(), "fail");
+		//demo.createTest(new Object() {}.getClass().getEnclosingMethod().getName());
 		login.enterPassword(password).clickLogin();
 		
 

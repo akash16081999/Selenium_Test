@@ -5,25 +5,30 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Listeners;
 
 import utils.ExtentRepoterDemo;
 
+
+@Listeners(utils.ExtentReportManager.class) // use this annotation if we want to trigger the 
+//                                               listener class without executing the xml file manually everytime.
 public class Base extends SeleniumBase {
 
 	static String URL = "https://test-manage.eateasy.ae/";
 	public ExtentRepoterDemo demo;
 
-	@BeforeClass
-	public void createReportGeneration() {
-		demo = ExtentRepoterDemo.getInstanceReporter();
-
-	}
+	/*
+	 * @BeforeClass public void createReportGeneration() { demo =
+	 * ExtentRepoterDemo.getInstanceReporter();
+	 * 
+	 * }
+	 */
 
 	@BeforeMethod
 	public void startWeb() {
 
 		setUp(Browsers.CHROME, URL);
+		//demo.createTest(new Object() {}.getClass().getEnclosingMethod().getName());
 
 	}
 
@@ -33,11 +38,12 @@ public class Base extends SeleniumBase {
 
 	}
 
-	@AfterClass
-	public void flushReport() {
-
-		demo.saveReport();
-
-	}
+	/*
+	 * @AfterClass public void flushReport() {
+	 * 
+	 * demo.saveReport();
+	 * 
+	 * }
+	 */
 
 }
