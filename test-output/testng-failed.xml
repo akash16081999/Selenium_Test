@@ -8,6 +8,7 @@
           <include name="loginTesWithInvalidData" invocation-numbers="0 1"/>
           <include name="stopWeb"/>
           <include name="startWeb"/>
+          <include name="loginTestWithValidData" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- org.ee.test.TC_001LoginTest -->
     </classes>

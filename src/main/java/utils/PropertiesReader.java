@@ -38,5 +38,10 @@ public class PropertiesReader {
 		return pro.getProperty("password");
 
 	}
+	
+	public String getBaseUrl() {
+		return pro.getProperty("base_url");
+
+	}
 
 }

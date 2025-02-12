@@ -1,4 +1,4 @@
-package org.ee.pages;
+package org.pages;
 
 public class Dashboard {
 

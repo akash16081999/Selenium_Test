@@ -1,4 +1,4 @@
-package org.ee.seleniumbase;
+package org.seleniumbase;
 
 public enum Locators {
 	

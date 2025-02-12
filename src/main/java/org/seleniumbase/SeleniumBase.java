@@ -1,4 +1,4 @@
-package org.ee.seleniumbase;
+package org.seleniumbase;
 
 import java.time.Duration;
 import java.util.ArrayList;

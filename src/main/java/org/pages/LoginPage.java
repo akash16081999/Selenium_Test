@@ -1,10 +1,10 @@
-package org.ee.pages;
+package org.pages;
 
-import org.ee.seleniumbase.Base;
-import org.ee.seleniumbase.Locators;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.seleniumbase.Base;
+import org.seleniumbase.Locators;
 
 public class LoginPage extends Base {
 

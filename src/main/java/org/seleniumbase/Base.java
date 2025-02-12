@@ -1,4 +1,6 @@
-package org.ee.seleniumbase;
+package org.seleniumbase;
+
+import java.util.Properties;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -8,13 +10,14 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 
 import utils.ExtentRepoterDemo;
+import utils.PropertiesReader;
 
 
 @Listeners(utils.ExtentReportManager.class) // use this annotation if we want to trigger the 
 //                                               listener class without executing the xml file manually everytime.
 public class Base extends SeleniumBase {
 
-	static String URL = "https://test-manage.eateasy.ae/";
+	
 	public ExtentRepoterDemo demo;
 
 	/*
@@ -27,7 +30,7 @@ public class Base extends SeleniumBase {
 	@BeforeMethod
 	public void startWeb() {
 
-		setUp(Browsers.CHROME, URL);
+		setUp(Browsers.CHROME, PropertiesReader.getInstancePropertyReader().getBaseUrl());
 		//demo.createTest(new Object() {}.getClass().getEnclosingMethod().getName());
 
 	}

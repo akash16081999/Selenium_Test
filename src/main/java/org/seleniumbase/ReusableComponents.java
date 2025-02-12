@@ -1,4 +1,4 @@
-package org.ee.seleniumbase;
+package org.seleniumbase;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
