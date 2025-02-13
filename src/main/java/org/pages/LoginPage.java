@@ -18,9 +18,9 @@ public class LoginPage extends Base {
 		
 	}
 
-	public LoginPage enterUserName(String user_name) {
+	public LoginPage enterUserEmail(String user_name) {
 
-		element(Locators.name, "username").sendKeys(user_name);
+		element(Locators.name, "email").sendKeys(user_name);
 		// driver.findElement(By.name("username")).sendKeys(user_name);
 		return this;
 
@@ -36,7 +36,10 @@ public class LoginPage extends Base {
 
 	public Dashboard clickLogin() {
 
-		click(element(Locators.classname, "submit"));
+		click(element(Locators.xpath, "//input[@type='submit']"));
+		  
+		
+		
 		// driver.findElement(By.className("submit")).click();
 		return new Dashboard();
 	}
@@ -48,7 +51,7 @@ public class LoginPage extends Base {
 
 	public void logintoDashboard(String user_name, String password) {
 		enterPassword(user_name);
-		enterUserName(user_name);
+		enterUserEmail(user_name);
 		clickLogin();
 	}
 

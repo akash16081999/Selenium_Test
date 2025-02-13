@@ -14,11 +14,11 @@ public class ReadExcel {
 	
 
 	public static String[][] getInValidLoginExcelData() throws IOException {
-		String sheetLoc = "E:\\EateasyTest\\data\\datasheet.xlsx";
+		//String sheetLoc = "E:\\EateasyTest\\data\\datasheet.xlsx";  --> hard coded the filepath not fetching the updating data.
 
 		
 
-		XSSFWorkbook book = new XSSFWorkbook(sheetLoc);
+		XSSFWorkbook book = new XSSFWorkbook(System.getProperty("user.dir")+"//data//datasheet.xlsx");
 
 		XSSFSheet sheet = book.getSheetAt(1);
 
@@ -60,11 +60,11 @@ public class ReadExcel {
 	
 	
 	public static String[][] getValidLoginExcelData() throws IOException {
-		String sheetLoc = "E:\\EateasyTest\\data\\datasheet.xlsx";
+		//String sheetLoc = "E:\\EateasyTest\\data\\datasheet.xlsx";
 
 		
 
-		XSSFWorkbook book = new XSSFWorkbook(sheetLoc);
+		XSSFWorkbook book = new XSSFWorkbook(System.getProperty("user.dir")+"//data//datasheet.xlsx");
 
 		XSSFSheet sheet = book.getSheetAt(0);
 
@@ -113,7 +113,7 @@ public class ReadExcel {
 	}
 	
 	
-	@DataProvider(/* parallel = true */ )
+	@DataProvider(name = "invalidData"/* parallel = true */ )
 	public String[][] getInValidLoginExcelSheetData() throws IOException {
 		
 		String[][] excelData = getInValidLoginExcelData();

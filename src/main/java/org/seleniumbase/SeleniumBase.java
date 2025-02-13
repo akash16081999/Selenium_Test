@@ -36,6 +36,10 @@ public class SeleniumBase implements ReusableComponents {
 
 	}
 
+	public WebDriver getDriver() {
+		return driver;
+	}
+
 	@Override
 	public void setUp(Browsers Browsername, String url) {
 		setWait(10);

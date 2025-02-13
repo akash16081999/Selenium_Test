@@ -2,6 +2,9 @@ package org.seleniumbase;
 
 import java.util.Properties;
 
+import org.assertions.AssertionManager;
+import org.pageObjectManager.PageManager;
+import org.pages.LoginPage;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -12,13 +15,15 @@ import org.testng.annotations.Listeners;
 import utils.ExtentRepoterDemo;
 import utils.PropertiesReader;
 
-
-@Listeners(utils.ExtentReportManager.class) // use this annotation if we want to trigger the 
+@Listeners(utils.ExtentReportManager.class) // use this annotation if we want to trigger the
 //                                               listener class without executing the xml file manually everytime.
 public class Base extends SeleniumBase {
 
-	
-	public ExtentRepoterDemo demo;
+	protected PageManager pagemanager;
+
+	protected AssertionManager assertmanager;
+
+	// public ExtentRepoterDemo demo;
 
 	/*
 	 * @BeforeClass public void createReportGeneration() { demo =
@@ -31,7 +36,11 @@ public class Base extends SeleniumBase {
 	public void startWeb() {
 
 		setUp(Browsers.CHROME, PropertiesReader.getInstancePropertyReader().getBaseUrl());
-		//demo.createTest(new Object() {}.getClass().getEnclosingMethod().getName());
+
+		pagemanager = new PageManager(driver, wait);
+		assertmanager = new AssertionManager(driver);
+
+		// demo.createTest(new Object() {}.getClass().getEnclosingMethod().getName());
 
 	}
 
