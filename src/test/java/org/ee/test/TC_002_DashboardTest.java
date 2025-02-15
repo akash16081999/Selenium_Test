@@ -18,8 +18,7 @@ public class TC_002_DashboardTest {
 		driver.manage().window().maximize();
 		System.out.println(driver.getCurrentUrl() + " " + Thread.currentThread().getId());
 
-		driver.get(
-				"https://github.com/akash16081999/Selenium_Test/blob/master/src/main/java/org/pageObjectManager/PageManager.java");
+		driver.get("https://github.com/akash16081999/Selenium_Test/blob/master/src/main/java/org/pageObjectManager/PageManager.java");
 
 	}
 
