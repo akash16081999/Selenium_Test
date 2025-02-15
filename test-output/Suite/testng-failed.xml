@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" parallel="tests" name="Listeneres_demo_Testing(failed)">
+<suite thread-count="2" parallel="methods" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="methods" name="Listeneres_demo_Testing(failed)">
     <classes>
-      <class name="org.ee.test.TC_001LoginTest">
+      <class name="org.ee.test.TC_002_DashboardTest">
         <methods>
-          <include name="loginTesWithInvalidData" invocation-numbers="0 1"/>
-          <include name="stopWeb"/>
-          <include name="createReportGeneration"/>
-          <include name="startWeb"/>
-          <include name="flushReport"/>
+          <include name="teardown"/>
+          <include name="start"/>
+          <include name="testMethodTwo"/>
         </methods>
-      </class> <!-- org.ee.test.TC_001LoginTest -->
+      </class> <!-- org.ee.test.TC_002_DashboardTest -->
     </classes>
   </test> <!-- Listeneres_demo_Testing(failed) -->
 </suite> <!-- Failed suite [Suite] -->

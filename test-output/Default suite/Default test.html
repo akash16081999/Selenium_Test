@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>5/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Feb 14 00:02:11 IST 2025</td>
+<td>Started on:</td><td>Sat Feb 15 13:13:19 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>27 seconds (27012 ms)</td>
+<tr><td>Total time:</td><td>32 seconds (32176 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,16 +76,14 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='org.ee.test.TC_001LoginTest.loginTestWithValidData()'><b>loginTestWithValidData</b><br>Test class: org.ee.test.TC_001LoginTest<br>Parameters: bnmb, sdff</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to be &quot;https://naveenautomationlabs.com/opencart/index.php?route=account/account&quot;. Current url: &quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot; (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.197, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\santh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61670}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61670/devtoo..., se:cdpVersion: 132.0.6834.197, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a6c476cc1c44779fda3d49e626e367a9
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at org.assertions.LoginPageAssertion.getSucessFullLoginAssert(LoginPageAssertion.java:21)
-	at org.ee.test.TC_001LoginTest.loginTestWithValidData(TC_001LoginTest.java:23)
+<td><div><pre>java.lang.AssertionError: expected [https://naveenautomationlabs.com/opencart/index.php?route=account/account] but found [https://naveenautomationlabs.com/opencart/index.php?route=account/login]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at org.ee.test.TC_001LoginTest.loginTestWithValidData(TC_001LoginTest.java:20)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
@@ -109,17 +107,15 @@ Session ID: a6c476cc1c44779fda3d49e626e367a9
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace931987151", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace931987151'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to be &quot;https://naveenautomationlabs.com/opencart/index.php?route=account/account&quot;. Current url: &quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot; (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.197, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\santh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61670}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61670/devtoo..., se:cdpVersion: 132.0.6834.197, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a6c476cc1c44779fda3d49e626e367a9
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at org.assertions.LoginPageAssertion.getSucessFullLoginAssert(LoginPageAssertion.java:21)
-	at org.ee.test.TC_001LoginTest.loginTestWithValidData(TC_001LoginTest.java:23)
+</pre></div><a href='#' onClick='toggleBox("stack-trace769342184", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace769342184'><pre>java.lang.AssertionError: expected [https://naveenautomationlabs.com/opencart/index.php?route=account/account] but found [https://naveenautomationlabs.com/opencart/index.php?route=account/login]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at org.ee.test.TC_001LoginTest.loginTestWithValidData(TC_001LoginTest.java:20)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
@@ -144,7 +140,7 @@ Session ID: a6c476cc1c44779fda3d49e626e367a9
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>10</td>
+<td>2</td>
 <td>org.ee.test.TC_001LoginTest@27912e3</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -155,6 +151,21 @@ Session ID: a6c476cc1c44779fda3d49e626e367a9
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='org.ee.test.TC_001LoginTest.loginTesWithInvalidData()'><b>loginTesWithInvalidData</b><br>Test class: org.ee.test.TC_001LoginTest<br>Parameters: akash, akash</td>
+<td></td>
+<td>0</td>
+<td>org.ee.test.TC_001LoginTest@27912e3</td></tr>
+<tr>
+<td title='org.ee.test.TC_001LoginTest.loginTesWithInvalidData()'><b>loginTesWithInvalidData</b><br>Test class: org.ee.test.TC_001LoginTest<br>Parameters: sam, sathish</td>
+<td></td>
+<td>1</td>
+<td>org.ee.test.TC_001LoginTest@27912e3</td></tr>
+<tr>
+<td title='org.ee.test.TC_001LoginTest.loginTesWithInvalidData()'><b>loginTesWithInvalidData</b><br>Test class: org.ee.test.TC_001LoginTest<br>Parameters: kumar, kumar</td>
+<td></td>
+<td>0</td>
+<td>org.ee.test.TC_001LoginTest@27912e3</td></tr>
+<tr>
 <td title='org.ee.test.TC_001LoginTest.loginTestWithValidData()'><b>loginTestWithValidData</b><br>Test class: org.ee.test.TC_001LoginTest<br>Parameters: dummytesting@gmail.com, Testing@123</td>
 <td></td>
 <td>1</td>
@@ -162,7 +173,7 @@ Session ID: a6c476cc1c44779fda3d49e626e367a9
 <tr>
 <td title='org.ee.test.TC_001LoginTest.loginTestWithValidData()'><b>loginTestWithValidData</b><br>Test class: org.ee.test.TC_001LoginTest<br>Parameters: dummytesting1@gmail.com, Testing@1234</td>
 <td></td>
-<td>2</td>
+<td>1</td>
 <td>org.ee.test.TC_001LoginTest@27912e3</td></tr>
 </table><p>
 </body>

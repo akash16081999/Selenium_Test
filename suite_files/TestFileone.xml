@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite" parallel="tests">
+<suite name="Suite" parallel="methods" thread-count="2">
 
 	<!--<listeners>
 		<listener class-name="listeners.MyListener"></listener>
@@ -8,7 +8,7 @@
 
 	<test name="Listeneres_demo_Testing">
 		<classes>
-		<class name="org.ee.test.TC_001LoginTest"></class>
+		<class name="org.ee.test.TC_002_DashboardTest" ></class>
 
 		</classes>
 

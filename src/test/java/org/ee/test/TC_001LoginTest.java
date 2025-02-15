@@ -1,7 +1,5 @@
 package org.ee.test;
 
-import org.assertions.AssertionManager;
-import org.assertions.LoginPageAssertion;
 import org.seleniumbase.Base;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -12,6 +10,8 @@ public class TC_001LoginTest extends Base {
 
 	@Test(dataProvider = "getValidLoginExcelSheetData", dataProviderClass = ReadExcel.class)
 	private void loginTestWithValidData(String username, String password) {
+		
+		System.out.println(Thread.currentThread().getId());
 
 		pagemanager.getInstanceLoginPage().enterUserEmail(username);
 
@@ -24,8 +24,9 @@ public class TC_001LoginTest extends Base {
 
 	}
 
-	@Test(dataProvider = "invalidData", dataProviderClass = ReadExcel.class,enabled = false)
+	@Test(dataProvider = "invalidData", dataProviderClass = ReadExcel.class)
 	private void loginTesWithInvalidData(String username, String password) {
+		System.out.println(Thread.currentThread().getId());
 
 		pagemanager.getInstanceLoginPage().enterUserEmail(username);
 
@@ -33,9 +34,6 @@ public class TC_001LoginTest extends Base {
 
 		Assert.assertEquals(getDriver().getCurrentUrl(),
 				assertmanager.getLoginPageAssertionInstance().getUnsucessfullLoginAssert());
-
-		// Assert.assertEquals(driver.getCurrentUrl(),
-		// "https://test-manage.eateasy.ae/users/employee_log");
 
 	}
 
