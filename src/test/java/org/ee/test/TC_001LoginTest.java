@@ -11,7 +11,7 @@ public class TC_001LoginTest extends Base {
 	@Test(dataProvider = "getValidLoginExcelSheetData", dataProviderClass = ReadExcel.class)
 	private void loginTestWithValidData(String username, String password) {
 		
-		System.out.println(Thread.currentThread().getId());
+		System.out.println(driver.hashCode()+" valid login");
 
 		pagemanager.getInstanceLoginPage().enterUserEmail(username);
 
@@ -26,7 +26,7 @@ public class TC_001LoginTest extends Base {
 
 	@Test(dataProvider = "invalidData", dataProviderClass = ReadExcel.class)
 	private void loginTesWithInvalidData(String username, String password) {
-		System.out.println(Thread.currentThread().getId());
+		System.out.println(driver.hashCode()+" invalid login");
 
 		pagemanager.getInstanceLoginPage().enterUserEmail(username);
 

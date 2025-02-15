@@ -7,27 +7,53 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import utils.ReadExcel;
+
 public class TC_002_DashboardTest {
 
-	//WebDriver driver = null;
+	public static ThreadLocal<WebDriver> tdriver = new ThreadLocal();
 
+	public void setDriver(WebDriver driver) {
+		tdriver.set(driver);
+	}
 
-	@Test
-	public void testMethodOne() {
-		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		System.out.println(driver.getCurrentUrl() + " " + Thread.currentThread().getId());
+	public WebDriver getDriver() {
+		return tdriver.get();
+	}
 
-		driver.get("https://github.com/akash16081999/Selenium_Test/blob/master/src/main/java/org/pageObjectManager/PageManager.java");
+	@BeforeMethod
+	private void startWeb() {
+
+		driver = new ChromeDriver();
+
+		setDriver(driver);
+
+		getDriver().manage().window().maximize();
 
 	}
 
-	@Test
+	WebDriver driver = null;
+
+	@Test()
+	public void testMethodOne() {
+
+		System.out.println(getDriver().getCurrentUrl() + " " + Thread.currentThread().getId());
+
+		getDriver().get("https://naveenautomationlabs.com/opencart/index.php?route=account/account");
+
+		
+
+		System.out.println(tdriver.hashCode() + "thread copy "+"fist method");
+
+	}
+
+	@Test()
 	public void testMethodTwo() {
-		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		System.out.println(driver.getCurrentUrl() + " " + Thread.currentThread().getId());
-		driver.get("https://naveenautomationlabs.com/opencart/index.php?route=account/account");
+		
+		System.out.println(tdriver.hashCode() + "thread copy "+"2nd method");
+		// tdriver.get().manage().window().maximize();
+		System.out.println(getDriver().getCurrentUrl() + " " + Thread.currentThread().getId());
+		getDriver().get("https://naveenautomationlabs.com/opencart/index.php?route=account/account");
 
 	}
 

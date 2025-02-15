@@ -23,6 +23,20 @@ public class SeleniumBase implements ReusableComponents {
 
 	long maxWaitTime = 20;
 	long timeouts = 10;
+	
+	
+	public static ThreadLocal<WebDriver> tdriver = new ThreadLocal<>();
+
+	private void setDriver(WebDriver driver) {
+		tdriver.set(driver);
+
+	}
+
+	public WebDriver getDriver() {
+		// TODO Auto-generated method stub
+		return tdriver.get();
+	}
+
 
 	@Override
 	public void setUp(String url) {
@@ -36,9 +50,9 @@ public class SeleniumBase implements ReusableComponents {
 
 	}
 
-	public WebDriver getDriver() {
-		return driver;
-	}
+	/*
+	 * public WebDriver getDriver() { return driver; }
+	 */
 
 	@Override
 	public void setUp(Browsers Browsername, String url) {
@@ -56,22 +70,23 @@ public class SeleniumBase implements ReusableComponents {
 		default:
 			throw new IllegalArgumentException("Unexpected value: " + Browsername);
 		}
+		setDriver(driver);
 
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(timeouts));
-		driver.get(url);
+		getDriver().manage().window().maximize();
+		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(timeouts));
+		getDriver().get(url);
 
 	}
 
 	@Override
 	public void close() {
 
-		driver.close();
+		getDriver().close();
 	}
 
 	@Override
 	public void quite() {
-		driver.quit();
+		getDriver().quit();
 	}
 
 	@Override
@@ -79,26 +94,26 @@ public class SeleniumBase implements ReusableComponents {
 
 		switch (findType) {
 		case id:
-			return driver.findElement(By.id(elemValue));
+			return getDriver().findElement(By.id(elemValue));
 
 		case name:
 
-			return driver.findElement(By.name(elemValue));
+			return getDriver().findElement(By.name(elemValue));
 
 		case classname:
-			return driver.findElement(By.className(elemValue));
+			return getDriver().findElement(By.className(elemValue));
 
 		case xpath:
-			return driver.findElement(By.xpath(elemValue));
+			return getDriver().findElement(By.xpath(elemValue));
 
 		case linktext:
-			return driver.findElement(By.linkText(elemValue));
+			return getDriver().findElement(By.linkText(elemValue));
 
 		case partiallinktext:
 			return driver.findElement(By.partialLinkText(elemValue));
 
 		case cssselector:
-			return driver.findElement(By.cssSelector(elemValue));
+			return getDriver().findElement(By.cssSelector(elemValue));
 
 		default:
 			throw new IllegalArgumentException("Unexpected value: " + findType);
@@ -109,13 +124,13 @@ public class SeleniumBase implements ReusableComponents {
 
 	@Override
 	public void url(String urlLink) {
-		driver.get(urlLink);
+		getDriver().get(urlLink);
 	}
 
 	@Override
 	public Alert switchToAlert() {
 
-		Alert alert = driver.switchTo().alert();
+		Alert alert = getDriver().switchTo().alert();
 		return alert;
 
 	}
@@ -138,7 +153,7 @@ public class SeleniumBase implements ReusableComponents {
 
 	public void setWait(long seconds) {
 
-		wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
+		wait = new WebDriverWait(getDriver(), Duration.ofSeconds(seconds));
 
 	}
 
@@ -172,13 +187,13 @@ public class SeleniumBase implements ReusableComponents {
 
 	@Override
 	public WebDriver switchToFrameByString(String framename) {
-		return driver.switchTo().frame(framename);
+		return getDriver().switchTo().frame(framename);
 
 	}
 
 	@Override
 	public WebDriver switchToFrameByElement(WebElement ele) {
-		return driver.switchTo().frame(ele);
+		return getDriver().switchTo().frame(ele);
 
 	}
 

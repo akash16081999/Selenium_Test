@@ -104,7 +104,7 @@ public class ReadExcel {
 	}
 	
 	
-	@DataProvider(/* parallel = true */ )
+	@DataProvider( )
 	public String[][] getValidLoginExcelSheetData() throws IOException {
 		
 		String[][] excelData = getValidLoginExcelData();

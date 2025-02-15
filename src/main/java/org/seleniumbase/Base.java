@@ -3,6 +3,7 @@ package org.seleniumbase;
 import java.util.Properties;
 
 import org.assertions.AssertionManager;
+import org.openqa.selenium.WebDriver;
 import org.pageObjectManager.PageManager;
 import org.pages.LoginPage;
 import org.testng.annotations.AfterClass;
@@ -38,8 +39,10 @@ public class Base extends SeleniumBase {
 
 		setUp(Browsers.CHROME, PropertiesReader.getInstancePropertyReader().getBaseUrl());
 
-		pagemanager = new PageManager(driver, wait);
-		assertmanager = new AssertionManager(driver);
+		pagemanager = new PageManager(getDriver(), wait);
+		assertmanager = new AssertionManager(getDriver());
+
+		System.out.println(driver.toString());
 
 		// demo.createTest(new Object() {}.getClass().getEnclosingMethod().getName());
 
@@ -47,7 +50,8 @@ public class Base extends SeleniumBase {
 
 	@AfterMethod
 	public void stopWeb() {
-		quite();
+		getDriver().quit();
+		;
 	}
 
 	/*
