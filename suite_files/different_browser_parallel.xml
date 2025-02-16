@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite" parallel="tests" thread-count="2">
+
+<suite name="Suite_different_parallel" parallel="tests" thread-count="2">
   
   
   <!--15-02-2025-->
@@ -10,15 +11,19 @@
         <listener class-name="listeners.MyListener"></listener>
     </listeners>-->
 
-    <test name="Listeneres_demo_Testing_001">
+    <test name="Listeneres_demo_Testing_001_chrome">
+    <parameter name="browser_name" value="Chrome"></parameter>
         <classes>
             <class name="org.ee.test.TC_001LoginTest"/>
+             <class name="org.ee.test.TC_002_DashboardTest"></class>
             
         </classes>
     </test>
     
-     <test name="Listeneres_demo_Testing_002">
+     <test name="Listeneres_demo_Testing_002_firefox">
+     <parameter name="browser_name" value="firefox"></parameter>
         <classes>
+          <class name="org.ee.test.TC_001LoginTest"/>
             
             <class name="org.ee.test.TC_002_DashboardTest"></class>
         </classes>

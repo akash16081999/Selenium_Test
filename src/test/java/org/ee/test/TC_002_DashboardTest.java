@@ -3,58 +3,55 @@ package org.ee.test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.seleniumbase.Base;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import utils.ReadExcel;
 
-public class TC_002_DashboardTest {
+public class TC_002_DashboardTest extends Base {
 
-	public static ThreadLocal<WebDriver> tdriver = new ThreadLocal();
-
-	public void setDriver(WebDriver driver) {
-		tdriver.set(driver);
-	}
-
-	public WebDriver getDriver() {
-		return tdriver.get();
-	}
-
-	@BeforeMethod
-	private void startWeb() {
-
-		driver = new ChromeDriver();
-
-		setDriver(driver);
-
-		getDriver().manage().window().maximize();
-
-	}
-
-	WebDriver driver = null;
-
-	@Test()
-	public void testMethodOne() {
-
-		System.out.println(getDriver().getCurrentUrl() + " " + Thread.currentThread().getId());
-
-		getDriver().get("https://naveenautomationlabs.com/opencart/index.php?route=account/account");
-
+	@Test(dataProvider = "getValidLoginExcelSheetData", dataProviderClass = ReadExcel.class)
+	private void loginTestWithValidData(String username, String password) {
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
+		System.out.println(driver.hashCode()+" valid login");
 
-		System.out.println(tdriver.hashCode() + "thread copy "+"fist method");
+		pagemanager.getInstanceLoginPage().enterUserEmail(username);
+
+		pagemanager.getInstanceLoginPage().enterPassword(password);
+
+		pagemanager.getInstanceLoginPage().clickLogin();
+
+		Assert.assertEquals(getDriver().getCurrentUrl(),
+				assertmanager.getLoginPageAssertionInstance().getSucessFullLoginAssert());
+
+	}
+
+	@Test(dataProvider = "invalidData", dataProviderClass = ReadExcel.class/* ,enabled = false */)
+	private void loginTesWithInvalidData(String username, String password) {
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println(driver.hashCode()+" invalid login");
+
+		pagemanager.getInstanceLoginPage().enterUserEmail(username);
+
+		pagemanager.getInstanceLoginPage().enterPassword(password).clickLogin();
+
+		Assert.assertEquals(getDriver().getCurrentUrl(),
+				assertmanager.getLoginPageAssertionInstance().getUnsucessfullLoginAssert());
 
 	}
 
-	@Test()
-	public void testMethodTwo() {
-		
-		System.out.println(tdriver.hashCode() + "thread copy "+"2nd method");
-		// tdriver.get().manage().window().maximize();
-		System.out.println(getDriver().getCurrentUrl() + " " + Thread.currentThread().getId());
-		getDriver().get("https://naveenautomationlabs.com/opencart/index.php?route=account/account");
-
-	}
 
 }

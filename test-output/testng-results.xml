@@ -1,79 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="3" failed="3" skipped="0">
+<testng-results ignored="0" total="32" passed="20" failed="12" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-15T14:52:26Z" name="Suite" finished-at="2025-02-15T14:52:46Z" duration-ms="19781">
+  <suite started-at="2025-02-16T11:21:53Z" name="Suite_different_parallel" finished-at="2025-02-16T11:25:22Z" duration-ms="208445">
     <groups>
     </groups>
-    <test started-at="2025-02-15T14:52:26Z" name="Listeneres_demo_Testing" finished-at="2025-02-15T14:52:46Z" duration-ms="19781">
-      <class name="org.ee.test.TC_001LoginTest">
-        <test-method is-config="true" signature="startWeb()[pri:0, instance:org.ee.test.TC_001LoginTest@1f9e9475]" started-at="2025-02-15T14:52:27Z" name="startWeb" finished-at="2025-02-15T14:52:31Z" duration-ms="4442" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startWeb -->
-        <test-method is-config="true" signature="startWeb()[pri:0, instance:org.ee.test.TC_001LoginTest@1f9e9475]" started-at="2025-02-15T14:52:27Z" name="startWeb" finished-at="2025-02-15T14:52:31Z" duration-ms="4343" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startWeb -->
-        <test-method signature="loginTestWithValidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@1f9e9475]" started-at="2025-02-15T14:52:31Z" name="loginTestWithValidData" data-provider="getValidLoginExcelSheetData" finished-at="2025-02-15T14:52:33Z" duration-ms="1807" status="FAIL">
+    <test started-at="2025-02-16T11:21:53Z" name="Listeneres_demo_Testing_001_chrome" finished-at="2025-02-16T11:24:25Z" duration-ms="152131">
+      <class name="org.ee.test.TC_002_DashboardTest">
+        <test-method is-config="true" signature="startWeb(java.lang.String)[pri:0, instance:org.ee.test.TC_002_DashboardTest@66ea810]" started-at="2025-02-16T11:23:14Z" name="startWeb" finished-at="2025-02-16T11:23:18Z" duration-ms="3876" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[dummytesting@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Testing@123]]>
+                <![CDATA[Chrome]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, getCurrentUrl {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.197, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\santh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54381}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54381/devtoo..., se:cdpVersion: 132.0.6834.197, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, getCurrentUrl {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.197, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\santh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54381}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54381/devtoo..., se:cdpVersion: 132.0.6834.197, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:151)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
-at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:325)
-at org.openqa.selenium.support.ui.ExpectedConditions$3.apply(ExpectedConditions.java:101)
-at org.openqa.selenium.support.ui.ExpectedConditions$3.apply(ExpectedConditions.java:96)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-at org.assertions.LoginPageAssertion.getSucessFullLoginAssert(LoginPageAssertion.java:24)
-at org.ee.test.TC_001LoginTest.loginTestWithValidData(TC_001LoginTest.java:23)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginTestWithValidData -->
-        <test-method signature="loginTesWithInvalidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@1f9e9475]" started-at="2025-02-15T14:52:31Z" name="loginTesWithInvalidData" data-provider="invalidData" finished-at="2025-02-15T14:52:33Z" duration-ms="1181" status="PASS">
+        </test-method> <!-- startWeb -->
+        <test-method signature="loginTesWithInvalidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_002_DashboardTest@66ea810]" started-at="2025-02-16T11:23:18Z" name="loginTesWithInvalidData" data-provider="invalidData" finished-at="2025-02-16T11:23:22Z" duration-ms="4096" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -89,81 +34,22 @@ at java.base/java.lang.Thread.run(Thread.java:1583)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTesWithInvalidData -->
-        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_001LoginTest@1f9e9475]" started-at="2025-02-15T14:52:33Z" name="stopWeb" finished-at="2025-02-15T14:52:33Z" duration-ms="182" status="PASS">
+        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_002_DashboardTest@66ea810]" started-at="2025-02-16T11:23:22Z" name="stopWeb" finished-at="2025-02-16T11:23:23Z" duration-ms="687" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopWeb -->
-        <test-method is-config="true" signature="startWeb()[pri:0, instance:org.ee.test.TC_001LoginTest@1f9e9475]" started-at="2025-02-15T14:52:33Z" name="startWeb" finished-at="2025-02-15T14:52:38Z" duration-ms="5309" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startWeb -->
-        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_001LoginTest@1f9e9475]" started-at="2025-02-15T14:52:33Z" name="stopWeb" finished-at="2025-02-15T14:52:34Z" duration-ms="416" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopWeb -->
-        <test-method is-config="true" signature="startWeb()[pri:0, instance:org.ee.test.TC_001LoginTest@1f9e9475]" started-at="2025-02-15T14:52:34Z" name="startWeb" finished-at="2025-02-15T14:52:37Z" duration-ms="3360" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startWeb -->
-        <test-method signature="loginTestWithValidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@1f9e9475]" started-at="2025-02-15T14:52:37Z" name="loginTestWithValidData" data-provider="getValidLoginExcelSheetData" finished-at="2025-02-15T14:52:39Z" duration-ms="2506" status="FAIL">
+        <test-method is-config="true" signature="startWeb(java.lang.String)[pri:0, instance:org.ee.test.TC_002_DashboardTest@66ea810]" started-at="2025-02-16T11:23:23Z" name="startWeb" finished-at="2025-02-16T11:23:27Z" duration-ms="3906" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[dummytesting1@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Testing@1234]]>
+                <![CDATA[Chrome]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, getCurrentUrl {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.197, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\santh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54421}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54421/devtoo..., se:cdpVersion: 132.0.6834.197, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, getCurrentUrl {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.197, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\santh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54421}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54421/devtoo..., se:cdpVersion: 132.0.6834.197, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:151)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
-at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:325)
-at org.openqa.selenium.support.ui.ExpectedConditions$3.apply(ExpectedConditions.java:101)
-at org.openqa.selenium.support.ui.ExpectedConditions$3.apply(ExpectedConditions.java:96)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-at org.assertions.LoginPageAssertion.getSucessFullLoginAssert(LoginPageAssertion.java:24)
-at org.ee.test.TC_001LoginTest.loginTestWithValidData(TC_001LoginTest.java:23)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginTestWithValidData -->
-        <test-method signature="loginTesWithInvalidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@1f9e9475]" started-at="2025-02-15T14:52:38Z" name="loginTesWithInvalidData" data-provider="invalidData" finished-at="2025-02-15T14:52:39Z" duration-ms="1014" status="PASS">
+        </test-method> <!-- startWeb -->
+        <test-method signature="loginTesWithInvalidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_002_DashboardTest@66ea810]" started-at="2025-02-16T11:23:27Z" name="loginTesWithInvalidData" data-provider="invalidData" finished-at="2025-02-16T11:23:31Z" duration-ms="4181" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -179,74 +65,22 @@ at java.base/java.lang.Thread.run(Thread.java:1583)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTesWithInvalidData -->
-        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_001LoginTest@1f9e9475]" started-at="2025-02-15T14:52:39Z" name="stopWeb" finished-at="2025-02-15T14:52:39Z" duration-ms="176" status="PASS">
+        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_002_DashboardTest@66ea810]" started-at="2025-02-16T11:23:31Z" name="stopWeb" finished-at="2025-02-16T11:23:31Z" duration-ms="416" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopWeb -->
-        <test-method is-config="true" signature="startWeb()[pri:0, instance:org.ee.test.TC_001LoginTest@1f9e9475]" started-at="2025-02-15T14:52:39Z" name="startWeb" finished-at="2025-02-15T14:52:44Z" duration-ms="5118" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startWeb -->
-        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_001LoginTest@1f9e9475]" started-at="2025-02-15T14:52:39Z" name="stopWeb" finished-at="2025-02-15T14:52:40Z" duration-ms="396" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopWeb -->
-        <test-method is-config="true" signature="startWeb()[pri:0, instance:org.ee.test.TC_001LoginTest@1f9e9475]" started-at="2025-02-15T14:52:40Z" name="startWeb" finished-at="2025-02-15T14:52:44Z" duration-ms="4504" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startWeb -->
-        <test-method signature="loginTestWithValidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@1f9e9475]" started-at="2025-02-15T14:52:44Z" name="loginTestWithValidData" data-provider="getValidLoginExcelSheetData" finished-at="2025-02-15T14:52:46Z" duration-ms="1131" status="FAIL">
+        <test-method is-config="true" signature="startWeb(java.lang.String)[pri:0, instance:org.ee.test.TC_002_DashboardTest@66ea810]" started-at="2025-02-16T11:23:31Z" name="startWeb" finished-at="2025-02-16T11:23:36Z" duration-ms="4852" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[bnmb]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[sdff]]>
+                <![CDATA[Chrome]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [171d6063bb67a77bb5f5d5c82d9e3b39, getCurrentUrl {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.197, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\santh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54470}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54470/devtoo..., se:cdpVersion: 132.0.6834.197, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 171d6063bb67a77bb5f5d5c82d9e3b39]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [171d6063bb67a77bb5f5d5c82d9e3b39, getCurrentUrl {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.197, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\santh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54470}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54470/devtoo..., se:cdpVersion: 132.0.6834.197, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 171d6063bb67a77bb5f5d5c82d9e3b39
-at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:499)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
-at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$1(JdkHttpClient.java:383)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: java.lang.InterruptedException
-at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
-at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073)
-at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:931)
-at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
-at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:455)
-... 8 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginTestWithValidData -->
-        <test-method signature="loginTesWithInvalidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@1f9e9475]" started-at="2025-02-15T14:52:44Z" name="loginTesWithInvalidData" data-provider="invalidData" finished-at="2025-02-15T14:52:45Z" duration-ms="866" status="PASS">
+        </test-method> <!-- startWeb -->
+        <test-method signature="loginTesWithInvalidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_002_DashboardTest@66ea810]" started-at="2025-02-16T11:23:36Z" name="loginTesWithInvalidData" data-provider="invalidData" finished-at="2025-02-16T11:23:40Z" duration-ms="4022" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -262,15 +96,1326 @@ at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTesWithInvalidData -->
-        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_001LoginTest@1f9e9475]" started-at="2025-02-15T14:52:45Z" name="stopWeb" finished-at="2025-02-15T14:52:46Z" duration-ms="493" status="PASS">
+        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_002_DashboardTest@66ea810]" started-at="2025-02-16T11:23:40Z" name="stopWeb" finished-at="2025-02-16T11:23:40Z" duration-ms="214" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopWeb -->
-        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_001LoginTest@1f9e9475]" started-at="2025-02-15T14:52:46Z" name="stopWeb" finished-at="2025-02-15T14:52:46Z" duration-ms="381" status="PASS">
+        <test-method is-config="true" signature="startWeb(java.lang.String)[pri:0, instance:org.ee.test.TC_002_DashboardTest@66ea810]" started-at="2025-02-16T11:23:40Z" name="startWeb" finished-at="2025-02-16T11:23:44Z" duration-ms="3625" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWeb -->
+        <test-method signature="loginTestWithValidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_002_DashboardTest@66ea810]" started-at="2025-02-16T11:23:44Z" name="loginTestWithValidData" data-provider="getValidLoginExcelSheetData" finished-at="2025-02-16T11:23:48Z" duration-ms="4057" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dummytesting@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Testing@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithValidData -->
+        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_002_DashboardTest@66ea810]" started-at="2025-02-16T11:23:48Z" name="stopWeb" finished-at="2025-02-16T11:23:49Z" duration-ms="420" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopWeb -->
+        <test-method is-config="true" signature="startWeb(java.lang.String)[pri:0, instance:org.ee.test.TC_002_DashboardTest@66ea810]" started-at="2025-02-16T11:23:49Z" name="startWeb" finished-at="2025-02-16T11:23:52Z" duration-ms="2966" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWeb -->
+        <test-method signature="loginTestWithValidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_002_DashboardTest@66ea810]" started-at="2025-02-16T11:23:52Z" name="loginTestWithValidData" data-provider="getValidLoginExcelSheetData" finished-at="2025-02-16T11:23:56Z" duration-ms="4114" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dummytesting1@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Testing@1234]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithValidData -->
+        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_002_DashboardTest@66ea810]" started-at="2025-02-16T11:23:56Z" name="stopWeb" finished-at="2025-02-16T11:23:56Z" duration-ms="288" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopWeb -->
+        <test-method is-config="true" signature="startWeb(java.lang.String)[pri:0, instance:org.ee.test.TC_002_DashboardTest@66ea810]" started-at="2025-02-16T11:23:56Z" name="startWeb" finished-at="2025-02-16T11:24:01Z" duration-ms="4858" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWeb -->
+        <test-method signature="loginTestWithValidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_002_DashboardTest@66ea810]" started-at="2025-02-16T11:24:01Z" name="loginTestWithValidData" data-provider="getValidLoginExcelSheetData" finished-at="2025-02-16T11:24:06Z" duration-ms="4846" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mndbmfnb]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[dsfbsdnfb]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [https://naveenautomationlabs.com/opencart/index.php?route=account/account] but found [https://naveenautomationlabs.com/opencart/index.php?route=account/login]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [https://naveenautomationlabs.com/opencart/index.php?route=account/account] but found [https://naveenautomationlabs.com/opencart/index.php?route=account/login]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at org.ee.test.TC_002_DashboardTest.loginTestWithValidData(TC_002_DashboardTest.java:32)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithValidData -->
+        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_002_DashboardTest@66ea810]" started-at="2025-02-16T11:24:06Z" name="stopWeb" finished-at="2025-02-16T11:24:06Z" duration-ms="260" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopWeb -->
+        <test-method is-config="true" signature="startWeb(java.lang.String)[pri:0, instance:org.ee.test.TC_002_DashboardTest@66ea810]" started-at="2025-02-16T11:24:06Z" name="startWeb" finished-at="2025-02-16T11:24:10Z" duration-ms="3576" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWeb -->
+        <test-method signature="loginTestWithValidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_002_DashboardTest@66ea810]" started-at="2025-02-16T11:24:10Z" name="loginTestWithValidData" data-provider="getValidLoginExcelSheetData" finished-at="2025-02-16T11:24:14Z" duration-ms="4984" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[fjsdfh]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[hkjhkjh]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [https://naveenautomationlabs.com/opencart/index.php?route=account/account] but found [https://naveenautomationlabs.com/opencart/index.php?route=account/login]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [https://naveenautomationlabs.com/opencart/index.php?route=account/account] but found [https://naveenautomationlabs.com/opencart/index.php?route=account/login]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at org.ee.test.TC_002_DashboardTest.loginTestWithValidData(TC_002_DashboardTest.java:32)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithValidData -->
+        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_002_DashboardTest@66ea810]" started-at="2025-02-16T11:24:14Z" name="stopWeb" finished-at="2025-02-16T11:24:15Z" duration-ms="248" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopWeb -->
+        <test-method is-config="true" signature="startWeb(java.lang.String)[pri:0, instance:org.ee.test.TC_002_DashboardTest@66ea810]" started-at="2025-02-16T11:24:15Z" name="startWeb" finished-at="2025-02-16T11:24:19Z" duration-ms="4527" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWeb -->
+        <test-method signature="loginTestWithValidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_002_DashboardTest@66ea810]" started-at="2025-02-16T11:24:19Z" name="loginTestWithValidData" data-provider="getValidLoginExcelSheetData" finished-at="2025-02-16T11:24:25Z" duration-ms="5410" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[yweiruy]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sdhfkjhsd]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [https://naveenautomationlabs.com/opencart/index.php?route=account/account] but found [https://naveenautomationlabs.com/opencart/index.php?route=account/login]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [https://naveenautomationlabs.com/opencart/index.php?route=account/account] but found [https://naveenautomationlabs.com/opencart/index.php?route=account/login]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at org.ee.test.TC_002_DashboardTest.loginTestWithValidData(TC_002_DashboardTest.java:32)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithValidData -->
+        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_002_DashboardTest@66ea810]" started-at="2025-02-16T11:24:25Z" name="stopWeb" finished-at="2025-02-16T11:24:25Z" duration-ms="726" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopWeb -->
+      </class> <!-- org.ee.test.TC_002_DashboardTest -->
+      <class name="org.ee.test.TC_001LoginTest">
+        <test-method is-config="true" signature="startWeb(java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@14dd7b39]" started-at="2025-02-16T11:21:54Z" name="startWeb" finished-at="2025-02-16T11:22:00Z" duration-ms="5715" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWeb -->
+        <test-method signature="loginTesWithInvalidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@14dd7b39]" started-at="2025-02-16T11:22:00Z" name="loginTesWithInvalidData" data-provider="invalidData" finished-at="2025-02-16T11:22:04Z" duration-ms="3987" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[akash]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[akash]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTesWithInvalidData -->
+        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_001LoginTest@14dd7b39]" started-at="2025-02-16T11:22:04Z" name="stopWeb" finished-at="2025-02-16T11:22:05Z" duration-ms="799" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopWeb -->
+        <test-method is-config="true" signature="startWeb(java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@14dd7b39]" started-at="2025-02-16T11:22:05Z" name="startWeb" finished-at="2025-02-16T11:22:09Z" duration-ms="4580" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWeb -->
+        <test-method signature="loginTesWithInvalidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@14dd7b39]" started-at="2025-02-16T11:22:09Z" name="loginTesWithInvalidData" data-provider="invalidData" finished-at="2025-02-16T11:22:14Z" duration-ms="4403" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sam]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sathish]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTesWithInvalidData -->
+        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_001LoginTest@14dd7b39]" started-at="2025-02-16T11:22:14Z" name="stopWeb" finished-at="2025-02-16T11:22:16Z" duration-ms="2348" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopWeb -->
+        <test-method is-config="true" signature="startWeb(java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@14dd7b39]" started-at="2025-02-16T11:22:16Z" name="startWeb" finished-at="2025-02-16T11:22:22Z" duration-ms="5434" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWeb -->
+        <test-method signature="loginTesWithInvalidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@14dd7b39]" started-at="2025-02-16T11:22:22Z" name="loginTesWithInvalidData" data-provider="invalidData" finished-at="2025-02-16T11:22:25Z" duration-ms="3889" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[kumar]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[kumar]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTesWithInvalidData -->
+        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_001LoginTest@14dd7b39]" started-at="2025-02-16T11:22:25Z" name="stopWeb" finished-at="2025-02-16T11:22:26Z" duration-ms="466" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopWeb -->
+        <test-method is-config="true" signature="startWeb(java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@14dd7b39]" started-at="2025-02-16T11:22:26Z" name="startWeb" finished-at="2025-02-16T11:22:30Z" duration-ms="3609" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWeb -->
+        <test-method signature="loginTestWithValidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@14dd7b39]" started-at="2025-02-16T11:22:30Z" name="loginTestWithValidData" data-provider="getValidLoginExcelSheetData" finished-at="2025-02-16T11:22:34Z" duration-ms="4121" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dummytesting@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Testing@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithValidData -->
+        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_001LoginTest@14dd7b39]" started-at="2025-02-16T11:22:34Z" name="stopWeb" finished-at="2025-02-16T11:22:34Z" duration-ms="395" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopWeb -->
+        <test-method is-config="true" signature="startWeb(java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@14dd7b39]" started-at="2025-02-16T11:22:34Z" name="startWeb" finished-at="2025-02-16T11:22:38Z" duration-ms="4273" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWeb -->
+        <test-method signature="loginTestWithValidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@14dd7b39]" started-at="2025-02-16T11:22:38Z" name="loginTestWithValidData" data-provider="getValidLoginExcelSheetData" finished-at="2025-02-16T11:22:43Z" duration-ms="4473" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dummytesting1@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Testing@1234]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithValidData -->
+        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_001LoginTest@14dd7b39]" started-at="2025-02-16T11:22:43Z" name="stopWeb" finished-at="2025-02-16T11:22:44Z" duration-ms="591" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopWeb -->
+        <test-method is-config="true" signature="startWeb(java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@14dd7b39]" started-at="2025-02-16T11:22:44Z" name="startWeb" finished-at="2025-02-16T11:22:47Z" duration-ms="3898" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWeb -->
+        <test-method signature="loginTestWithValidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@14dd7b39]" started-at="2025-02-16T11:22:47Z" name="loginTestWithValidData" data-provider="getValidLoginExcelSheetData" finished-at="2025-02-16T11:22:52Z" duration-ms="5030" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mndbmfnb]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[dsfbsdnfb]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [https://naveenautomationlabs.com/opencart/index.php?route=account/account] but found [https://naveenautomationlabs.com/opencart/index.php?route=account/login]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [https://naveenautomationlabs.com/opencart/index.php?route=account/account] but found [https://naveenautomationlabs.com/opencart/index.php?route=account/login]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at org.ee.test.TC_001LoginTest.loginTestWithValidData(TC_001LoginTest.java:28)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithValidData -->
+        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_001LoginTest@14dd7b39]" started-at="2025-02-16T11:22:52Z" name="stopWeb" finished-at="2025-02-16T11:22:53Z" duration-ms="785" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopWeb -->
+        <test-method is-config="true" signature="startWeb(java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@14dd7b39]" started-at="2025-02-16T11:22:53Z" name="startWeb" finished-at="2025-02-16T11:22:58Z" duration-ms="4476" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWeb -->
+        <test-method signature="loginTestWithValidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@14dd7b39]" started-at="2025-02-16T11:22:58Z" name="loginTestWithValidData" data-provider="getValidLoginExcelSheetData" finished-at="2025-02-16T11:23:02Z" duration-ms="4789" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[fjsdfh]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[hkjhkjh]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [https://naveenautomationlabs.com/opencart/index.php?route=account/account] but found [https://naveenautomationlabs.com/opencart/index.php?route=account/login]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [https://naveenautomationlabs.com/opencart/index.php?route=account/account] but found [https://naveenautomationlabs.com/opencart/index.php?route=account/login]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at org.ee.test.TC_001LoginTest.loginTestWithValidData(TC_001LoginTest.java:28)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithValidData -->
+        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_001LoginTest@14dd7b39]" started-at="2025-02-16T11:23:02Z" name="stopWeb" finished-at="2025-02-16T11:23:03Z" duration-ms="312" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopWeb -->
+        <test-method is-config="true" signature="startWeb(java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@14dd7b39]" started-at="2025-02-16T11:23:03Z" name="startWeb" finished-at="2025-02-16T11:23:08Z" duration-ms="5491" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWeb -->
+        <test-method signature="loginTestWithValidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@14dd7b39]" started-at="2025-02-16T11:23:08Z" name="loginTestWithValidData" data-provider="getValidLoginExcelSheetData" finished-at="2025-02-16T11:23:13Z" duration-ms="5030" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[yweiruy]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sdhfkjhsd]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [https://naveenautomationlabs.com/opencart/index.php?route=account/account] but found [https://naveenautomationlabs.com/opencart/index.php?route=account/login]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [https://naveenautomationlabs.com/opencart/index.php?route=account/account] but found [https://naveenautomationlabs.com/opencart/index.php?route=account/login]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at org.ee.test.TC_001LoginTest.loginTestWithValidData(TC_001LoginTest.java:28)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithValidData -->
+        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_001LoginTest@14dd7b39]" started-at="2025-02-16T11:23:13Z" name="stopWeb" finished-at="2025-02-16T11:23:14Z" duration-ms="586" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopWeb -->
       </class> <!-- org.ee.test.TC_001LoginTest -->
-    </test> <!-- Listeneres_demo_Testing -->
-  </suite> <!-- Suite -->
+    </test> <!-- Listeneres_demo_Testing_001_chrome -->
+    <test started-at="2025-02-16T11:21:53Z" name="Listeneres_demo_Testing_002_firefox" finished-at="2025-02-16T11:25:22Z" duration-ms="208443">
+      <class name="org.ee.test.TC_001LoginTest">
+        <test-method is-config="true" signature="startWeb(java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@21be3395]" started-at="2025-02-16T11:21:54Z" name="startWeb" finished-at="2025-02-16T11:22:04Z" duration-ms="10195" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWeb -->
+        <test-method signature="loginTesWithInvalidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@21be3395]" started-at="2025-02-16T11:22:04Z" name="loginTesWithInvalidData" data-provider="invalidData" finished-at="2025-02-16T11:22:08Z" duration-ms="3987" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[akash]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[akash]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTesWithInvalidData -->
+        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_001LoginTest@21be3395]" started-at="2025-02-16T11:22:08Z" name="stopWeb" finished-at="2025-02-16T11:22:10Z" duration-ms="1573" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopWeb -->
+        <test-method is-config="true" signature="startWeb(java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@21be3395]" started-at="2025-02-16T11:22:10Z" name="startWeb" finished-at="2025-02-16T11:22:18Z" duration-ms="8452" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWeb -->
+        <test-method signature="loginTesWithInvalidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@21be3395]" started-at="2025-02-16T11:22:18Z" name="loginTesWithInvalidData" data-provider="invalidData" finished-at="2025-02-16T11:22:22Z" duration-ms="3670" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sam]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sathish]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTesWithInvalidData -->
+        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_001LoginTest@21be3395]" started-at="2025-02-16T11:22:22Z" name="stopWeb" finished-at="2025-02-16T11:22:24Z" duration-ms="1689" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopWeb -->
+        <test-method is-config="true" signature="startWeb(java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@21be3395]" started-at="2025-02-16T11:22:24Z" name="startWeb" finished-at="2025-02-16T11:22:32Z" duration-ms="8070" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWeb -->
+        <test-method signature="loginTesWithInvalidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@21be3395]" started-at="2025-02-16T11:22:32Z" name="loginTesWithInvalidData" data-provider="invalidData" finished-at="2025-02-16T11:22:36Z" duration-ms="3858" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[kumar]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[kumar]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTesWithInvalidData -->
+        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_001LoginTest@21be3395]" started-at="2025-02-16T11:22:36Z" name="stopWeb" finished-at="2025-02-16T11:22:38Z" duration-ms="2006" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopWeb -->
+        <test-method is-config="true" signature="startWeb(java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@21be3395]" started-at="2025-02-16T11:22:38Z" name="startWeb" finished-at="2025-02-16T11:22:45Z" duration-ms="6796" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWeb -->
+        <test-method signature="loginTestWithValidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@21be3395]" started-at="2025-02-16T11:22:45Z" name="loginTestWithValidData" data-provider="getValidLoginExcelSheetData" finished-at="2025-02-16T11:22:49Z" duration-ms="4017" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dummytesting@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Testing@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithValidData -->
+        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_001LoginTest@21be3395]" started-at="2025-02-16T11:22:49Z" name="stopWeb" finished-at="2025-02-16T11:22:50Z" duration-ms="1131" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopWeb -->
+        <test-method is-config="true" signature="startWeb(java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@21be3395]" started-at="2025-02-16T11:22:50Z" name="startWeb" finished-at="2025-02-16T11:22:57Z" duration-ms="6762" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWeb -->
+        <test-method signature="loginTestWithValidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@21be3395]" started-at="2025-02-16T11:22:57Z" name="loginTestWithValidData" data-provider="getValidLoginExcelSheetData" finished-at="2025-02-16T11:23:01Z" duration-ms="4061" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dummytesting1@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Testing@1234]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithValidData -->
+        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_001LoginTest@21be3395]" started-at="2025-02-16T11:23:01Z" name="stopWeb" finished-at="2025-02-16T11:23:02Z" duration-ms="1528" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopWeb -->
+        <test-method is-config="true" signature="startWeb(java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@21be3395]" started-at="2025-02-16T11:23:02Z" name="startWeb" finished-at="2025-02-16T11:23:10Z" duration-ms="8046" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWeb -->
+        <test-method signature="loginTestWithValidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@21be3395]" started-at="2025-02-16T11:23:10Z" name="loginTestWithValidData" data-provider="getValidLoginExcelSheetData" finished-at="2025-02-16T11:23:15Z" duration-ms="5090" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mndbmfnb]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[dsfbsdnfb]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [https://naveenautomationlabs.com/opencart/index.php?route=account/account] but found [https://naveenautomationlabs.com/opencart/index.php?route=account/login]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [https://naveenautomationlabs.com/opencart/index.php?route=account/account] but found [https://naveenautomationlabs.com/opencart/index.php?route=account/login]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at org.ee.test.TC_001LoginTest.loginTestWithValidData(TC_001LoginTest.java:28)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithValidData -->
+        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_001LoginTest@21be3395]" started-at="2025-02-16T11:23:15Z" name="stopWeb" finished-at="2025-02-16T11:23:17Z" duration-ms="1372" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopWeb -->
+        <test-method is-config="true" signature="startWeb(java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@21be3395]" started-at="2025-02-16T11:23:17Z" name="startWeb" finished-at="2025-02-16T11:23:24Z" duration-ms="6893" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWeb -->
+        <test-method signature="loginTestWithValidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@21be3395]" started-at="2025-02-16T11:23:24Z" name="loginTestWithValidData" data-provider="getValidLoginExcelSheetData" finished-at="2025-02-16T11:23:28Z" duration-ms="4752" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[fjsdfh]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[hkjhkjh]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [https://naveenautomationlabs.com/opencart/index.php?route=account/account] but found [https://naveenautomationlabs.com/opencart/index.php?route=account/login]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [https://naveenautomationlabs.com/opencart/index.php?route=account/account] but found [https://naveenautomationlabs.com/opencart/index.php?route=account/login]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at org.ee.test.TC_001LoginTest.loginTestWithValidData(TC_001LoginTest.java:28)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithValidData -->
+        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_001LoginTest@21be3395]" started-at="2025-02-16T11:23:28Z" name="stopWeb" finished-at="2025-02-16T11:23:30Z" duration-ms="2013" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopWeb -->
+        <test-method is-config="true" signature="startWeb(java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@21be3395]" started-at="2025-02-16T11:23:30Z" name="startWeb" finished-at="2025-02-16T11:23:37Z" duration-ms="7193" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWeb -->
+        <test-method signature="loginTestWithValidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_001LoginTest@21be3395]" started-at="2025-02-16T11:23:37Z" name="loginTestWithValidData" data-provider="getValidLoginExcelSheetData" finished-at="2025-02-16T11:23:42Z" duration-ms="4725" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[yweiruy]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sdhfkjhsd]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [https://naveenautomationlabs.com/opencart/index.php?route=account/account] but found [https://naveenautomationlabs.com/opencart/index.php?route=account/login]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [https://naveenautomationlabs.com/opencart/index.php?route=account/account] but found [https://naveenautomationlabs.com/opencart/index.php?route=account/login]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at org.ee.test.TC_001LoginTest.loginTestWithValidData(TC_001LoginTest.java:28)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithValidData -->
+        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_001LoginTest@21be3395]" started-at="2025-02-16T11:23:42Z" name="stopWeb" finished-at="2025-02-16T11:23:43Z" duration-ms="1287" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopWeb -->
+      </class> <!-- org.ee.test.TC_001LoginTest -->
+      <class name="org.ee.test.TC_002_DashboardTest">
+        <test-method is-config="true" signature="startWeb(java.lang.String)[pri:0, instance:org.ee.test.TC_002_DashboardTest@4f49f6af]" started-at="2025-02-16T11:23:44Z" name="startWeb" finished-at="2025-02-16T11:23:51Z" duration-ms="6961" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWeb -->
+        <test-method signature="loginTesWithInvalidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_002_DashboardTest@4f49f6af]" started-at="2025-02-16T11:23:51Z" name="loginTesWithInvalidData" data-provider="invalidData" finished-at="2025-02-16T11:23:54Z" duration-ms="3813" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[akash]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[akash]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTesWithInvalidData -->
+        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_002_DashboardTest@4f49f6af]" started-at="2025-02-16T11:23:54Z" name="stopWeb" finished-at="2025-02-16T11:23:56Z" duration-ms="1325" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopWeb -->
+        <test-method is-config="true" signature="startWeb(java.lang.String)[pri:0, instance:org.ee.test.TC_002_DashboardTest@4f49f6af]" started-at="2025-02-16T11:23:56Z" name="startWeb" finished-at="2025-02-16T11:24:04Z" duration-ms="8166" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWeb -->
+        <test-method signature="loginTesWithInvalidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_002_DashboardTest@4f49f6af]" started-at="2025-02-16T11:24:04Z" name="loginTesWithInvalidData" data-provider="invalidData" finished-at="2025-02-16T11:24:08Z" duration-ms="3923" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sam]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sathish]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTesWithInvalidData -->
+        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_002_DashboardTest@4f49f6af]" started-at="2025-02-16T11:24:08Z" name="stopWeb" finished-at="2025-02-16T11:24:09Z" duration-ms="1495" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopWeb -->
+        <test-method is-config="true" signature="startWeb(java.lang.String)[pri:0, instance:org.ee.test.TC_002_DashboardTest@4f49f6af]" started-at="2025-02-16T11:24:09Z" name="startWeb" finished-at="2025-02-16T11:24:16Z" duration-ms="6277" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWeb -->
+        <test-method signature="loginTesWithInvalidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_002_DashboardTest@4f49f6af]" started-at="2025-02-16T11:24:16Z" name="loginTesWithInvalidData" data-provider="invalidData" finished-at="2025-02-16T11:24:19Z" duration-ms="3838" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[kumar]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[kumar]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTesWithInvalidData -->
+        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_002_DashboardTest@4f49f6af]" started-at="2025-02-16T11:24:19Z" name="stopWeb" finished-at="2025-02-16T11:24:21Z" duration-ms="1195" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopWeb -->
+        <test-method is-config="true" signature="startWeb(java.lang.String)[pri:0, instance:org.ee.test.TC_002_DashboardTest@4f49f6af]" started-at="2025-02-16T11:24:21Z" name="startWeb" finished-at="2025-02-16T11:24:27Z" duration-ms="6429" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWeb -->
+        <test-method signature="loginTestWithValidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_002_DashboardTest@4f49f6af]" started-at="2025-02-16T11:24:27Z" name="loginTestWithValidData" data-provider="getValidLoginExcelSheetData" finished-at="2025-02-16T11:24:31Z" duration-ms="4144" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dummytesting@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Testing@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithValidData -->
+        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_002_DashboardTest@4f49f6af]" started-at="2025-02-16T11:24:31Z" name="stopWeb" finished-at="2025-02-16T11:24:32Z" duration-ms="1197" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopWeb -->
+        <test-method is-config="true" signature="startWeb(java.lang.String)[pri:0, instance:org.ee.test.TC_002_DashboardTest@4f49f6af]" started-at="2025-02-16T11:24:32Z" name="startWeb" finished-at="2025-02-16T11:24:38Z" duration-ms="5618" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWeb -->
+        <test-method signature="loginTestWithValidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_002_DashboardTest@4f49f6af]" started-at="2025-02-16T11:24:38Z" name="loginTestWithValidData" data-provider="getValidLoginExcelSheetData" finished-at="2025-02-16T11:24:42Z" duration-ms="4060" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dummytesting1@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Testing@1234]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithValidData -->
+        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_002_DashboardTest@4f49f6af]" started-at="2025-02-16T11:24:42Z" name="stopWeb" finished-at="2025-02-16T11:24:44Z" duration-ms="1716" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopWeb -->
+        <test-method is-config="true" signature="startWeb(java.lang.String)[pri:0, instance:org.ee.test.TC_002_DashboardTest@4f49f6af]" started-at="2025-02-16T11:24:44Z" name="startWeb" finished-at="2025-02-16T11:24:50Z" duration-ms="6099" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWeb -->
+        <test-method signature="loginTestWithValidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_002_DashboardTest@4f49f6af]" started-at="2025-02-16T11:24:50Z" name="loginTestWithValidData" data-provider="getValidLoginExcelSheetData" finished-at="2025-02-16T11:24:55Z" duration-ms="4830" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mndbmfnb]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[dsfbsdnfb]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [https://naveenautomationlabs.com/opencart/index.php?route=account/account] but found [https://naveenautomationlabs.com/opencart/index.php?route=account/login]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [https://naveenautomationlabs.com/opencart/index.php?route=account/account] but found [https://naveenautomationlabs.com/opencart/index.php?route=account/login]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at org.ee.test.TC_002_DashboardTest.loginTestWithValidData(TC_002_DashboardTest.java:32)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithValidData -->
+        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_002_DashboardTest@4f49f6af]" started-at="2025-02-16T11:24:55Z" name="stopWeb" finished-at="2025-02-16T11:24:56Z" duration-ms="1033" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopWeb -->
+        <test-method is-config="true" signature="startWeb(java.lang.String)[pri:0, instance:org.ee.test.TC_002_DashboardTest@4f49f6af]" started-at="2025-02-16T11:24:56Z" name="startWeb" finished-at="2025-02-16T11:25:04Z" duration-ms="7696" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWeb -->
+        <test-method signature="loginTestWithValidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_002_DashboardTest@4f49f6af]" started-at="2025-02-16T11:25:04Z" name="loginTestWithValidData" data-provider="getValidLoginExcelSheetData" finished-at="2025-02-16T11:25:08Z" duration-ms="4680" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[fjsdfh]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[hkjhkjh]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [https://naveenautomationlabs.com/opencart/index.php?route=account/account] but found [https://naveenautomationlabs.com/opencart/index.php?route=account/login]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [https://naveenautomationlabs.com/opencart/index.php?route=account/account] but found [https://naveenautomationlabs.com/opencart/index.php?route=account/login]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at org.ee.test.TC_002_DashboardTest.loginTestWithValidData(TC_002_DashboardTest.java:32)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithValidData -->
+        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_002_DashboardTest@4f49f6af]" started-at="2025-02-16T11:25:08Z" name="stopWeb" finished-at="2025-02-16T11:25:09Z" duration-ms="1111" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopWeb -->
+        <test-method is-config="true" signature="startWeb(java.lang.String)[pri:0, instance:org.ee.test.TC_002_DashboardTest@4f49f6af]" started-at="2025-02-16T11:25:09Z" name="startWeb" finished-at="2025-02-16T11:25:16Z" duration-ms="6322" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWeb -->
+        <test-method signature="loginTestWithValidData(java.lang.String, java.lang.String)[pri:0, instance:org.ee.test.TC_002_DashboardTest@4f49f6af]" started-at="2025-02-16T11:25:16Z" name="loginTestWithValidData" data-provider="getValidLoginExcelSheetData" finished-at="2025-02-16T11:25:21Z" duration-ms="4915" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[yweiruy]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sdhfkjhsd]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [https://naveenautomationlabs.com/opencart/index.php?route=account/account] but found [https://naveenautomationlabs.com/opencart/index.php?route=account/login]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [https://naveenautomationlabs.com/opencart/index.php?route=account/account] but found [https://naveenautomationlabs.com/opencart/index.php?route=account/login]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at org.ee.test.TC_002_DashboardTest.loginTestWithValidData(TC_002_DashboardTest.java:32)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithValidData -->
+        <test-method is-config="true" signature="stopWeb()[pri:0, instance:org.ee.test.TC_002_DashboardTest@4f49f6af]" started-at="2025-02-16T11:25:21Z" name="stopWeb" finished-at="2025-02-16T11:25:22Z" duration-ms="1178" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopWeb -->
+      </class> <!-- org.ee.test.TC_002_DashboardTest -->
+    </test> <!-- Listeneres_demo_Testing_002_firefox -->
+  </suite> <!-- Suite_different_parallel -->
 </testng-results>

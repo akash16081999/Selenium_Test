@@ -13,7 +13,10 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Parameters;
 import org.testng.internal.ExpectedExceptionsHolder;
+
+import utils.PropertiesReader;
 
 public class SeleniumBase implements ReusableComponents {
 
@@ -23,8 +26,7 @@ public class SeleniumBase implements ReusableComponents {
 
 	long maxWaitTime = 20;
 	long timeouts = 10;
-	
-	
+
 	public static ThreadLocal<WebDriver> tdriver = new ThreadLocal<>();
 
 	private void setDriver(WebDriver driver) {
@@ -37,9 +39,8 @@ public class SeleniumBase implements ReusableComponents {
 		return tdriver.get();
 	}
 
-
 	@Override
-	public void setUp(String url) {
+	public void setUpChrome(String url) {
 
 		driver = new ChromeDriver();
 
@@ -55,9 +56,11 @@ public class SeleniumBase implements ReusableComponents {
 	 */
 
 	@Override
-	public void setUp(Browsers Browsername, String url) {
+	public void setUp(String Browsername) {
+		
+		Browsers BrowserName = Browsers.valueOf(Browsername.toUpperCase());
 		setWait(10);
-		switch (Browsername) {
+		switch (BrowserName) {
 		case CHROME:
 			driver = new ChromeDriver();
 			break;
@@ -73,8 +76,8 @@ public class SeleniumBase implements ReusableComponents {
 		setDriver(driver);
 
 		getDriver().manage().window().maximize();
+		getUrl();
 		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(timeouts));
-		getDriver().get(url);
 
 	}
 
@@ -200,6 +203,12 @@ public class SeleniumBase implements ReusableComponents {
 	@Override
 	public WebDriver switchToFrameByIndex(int index) {
 		return driver.switchTo().frame(index);
+
+	}
+
+	@Override
+	public void getUrl() {
+		getDriver().get(PropertiesReader.getInstancePropertyReader().getBaseUrl());
 
 	}
 

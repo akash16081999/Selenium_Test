@@ -13,7 +13,7 @@ public interface ReusableComponents {
 	 * 
 	 */
 
-	void setUp(String url);
+	void setUpChrome(String url);
 
 	/**
 	 * This will launch the the website of the given browser.
@@ -22,7 +22,7 @@ public interface ReusableComponents {
 	 * @param url
 	 */
 
-	void setUp(Browsers Browsername, String url);
+	void setUp(String Browsername);
 
 	/**
 	 * This will close the current window
@@ -53,6 +53,9 @@ public interface ReusableComponents {
 	 * @return
 	 */
 
+	
+	void getUrl();
+	
 	WebDriver switchToWindow(int index);
 
 	void url(String urlLink);

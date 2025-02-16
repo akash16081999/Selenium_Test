@@ -10,6 +10,12 @@ public class TC_001LoginTest extends Base {
 
 	@Test(dataProvider = "getValidLoginExcelSheetData", dataProviderClass = ReadExcel.class)
 	private void loginTestWithValidData(String username, String password) {
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		System.out.println(driver.hashCode()+" valid login");
 
@@ -24,8 +30,14 @@ public class TC_001LoginTest extends Base {
 
 	}
 
-	@Test(dataProvider = "invalidData", dataProviderClass = ReadExcel.class)
+	@Test(dataProvider = "invalidData", dataProviderClass = ReadExcel.class/* ,enabled = false */)
 	private void loginTesWithInvalidData(String username, String password) {
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		System.out.println(driver.hashCode()+" invalid login");
 
 		pagemanager.getInstanceLoginPage().enterUserEmail(username);

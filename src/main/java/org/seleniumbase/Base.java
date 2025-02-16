@@ -13,6 +13,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
+import org.testng.annotations.Parameters;
 
 import utils.ExtentRepoterDemo;
 import utils.PropertiesReader;
@@ -35,9 +36,10 @@ public class Base extends SeleniumBase {
 	 */
 
 	@BeforeMethod
-	public void startWeb() {
+	@Parameters("browser_name")
+	public void startWeb(String BrowserName) {
 
-		setUp(Browsers.CHROME, PropertiesReader.getInstancePropertyReader().getBaseUrl());
+		setUp(BrowserName);
 
 		pagemanager = new PageManager(getDriver(), wait);
 		assertmanager = new AssertionManager(getDriver());
@@ -50,8 +52,7 @@ public class Base extends SeleniumBase {
 
 	@AfterMethod
 	public void stopWeb() {
-		getDriver().quit();
-		;
+		quite();
 	}
 
 	/*
