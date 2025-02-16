@@ -1,1 +1,7 @@
 hi harish
+extentReports.attachReporter(reporter);
+		extentReports.setSystemInfo("System", "MAC");
+		extentReports.setSystemInfo("Author", "Naveen AutomationLabs");
+		extentReports.setSystemInfo("Build#", "1.1");
+		extentReports.setSystemInfo("Team", "OpenCart QA Team");
+		extentReports.setSystemInfo("ENV NAME", System.getProperty("env"));
